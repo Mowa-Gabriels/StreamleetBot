@@ -65,8 +65,7 @@ def resumebot():
 
 
 def prdbot():
-
-    st.title('PRD.ai - Your Personal PRD Creator🤖📄')
+    st.title('PRD.ai - Your Personal PRD Creator.🤖📄')
     """
     Let's create your next Product Requirement Documents Together.
     """
