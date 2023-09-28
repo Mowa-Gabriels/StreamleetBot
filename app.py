@@ -50,7 +50,7 @@ def resumebot():
             {"role": "assistant", "content": 
             "Your name  is Resume.ai,  Your created by Mowa."},
         ]
-    if prompt := st.chat_input(): 
+    if prompt := st.chat_input("Enter the job description.."): 
         openai.api_key = OPENAI_API_KEY
         st.session_state.messages.append({"role": "user", "content": f'create a sample CV for me using the following job description:{prompt}'})
                                          
@@ -77,7 +77,7 @@ def prdbot():
             {"role": "assistant", "content": 
             "Your name  is PRD-Creator,  You help users create well-grained product requirement document based on the product overview provided."},
         ]
-    if prompt := st.chat_input(): 
+    if prompt := st.chat_input("Enter a brief overview of the product..."): 
         openai.api_key = OPENAI_API_KEY
         st.session_state.messages.append({"role": "user", "content": f'outlining the key details such as overview, objectives, team, status of the product, product messaging, supported platforms, out-of-scope items, user persona, target market, use cases, success metrics, design specifications, key features and all functional and non-functional requirements, also critically explain everything listed  under the functional and non functional requirements .Create a comprehensive and well detailed Product Requirements Document (PRD) using this overview:{prompt}'})
                                          
